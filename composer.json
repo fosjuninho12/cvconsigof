@@ -1,6 +1,6 @@
 {
   "name": "wallace/tiede",
-  "description": "Curso de Formação FullStackPHP",
+  "description": "Curso de Formaï¿½ï¿½o FullStackPHP",
   "minimum-stability": "stable",
   "authors": [
     {
@@ -13,8 +13,8 @@
   "config": {
     "vendor-dir": "vendor"
   },
-  "autoload": {
-    "psr-4": {
+  "autoload": { 
+    "psr-4": { 
       "Source\\": "source/"
     },
     "files": [
