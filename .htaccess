@@ -1,12 +1,14 @@
 RewriteEngine On
 Options All -Indexes
 
+# BLINDAGEM: nunca mandar assets para o router
+RewriteRule ^themes/ - [L]
+RewriteRule ^storage/ - [L]
+
 # Não reescrever arquivos/pastas reais (CSS/JS/img)
 RewriteCond %{REQUEST_FILENAME} -f [OR]
 RewriteCond %{REQUEST_FILENAME} -d
 RewriteRule ^ - [L]
 
-# Router (CoffeeCode) - mantém querystring e encerra regra
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
+# Router (CoffeeCode)
 RewriteRule ^(.*)$ index.php?route=/$1 [QSA,L]
