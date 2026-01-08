@@ -2,32 +2,32 @@
 /**
  * DATABASE
  */
-define("CONF_DB_HOST", "localhost");
-define("CONF_DB_USER", "root");
-define("CONF_DB_PASS", "");
-define("CONF_DB_NAME", "fullstackphp");
+define("CONF_DB_HOST", "bd_cvconsig");
+define("CONF_DB_USER", "cvconsig");
+define("CONF_DB_PASS", "admin");
+define("CONF_DB_NAME", "cvconsig");
 
 /**
  * PROJECT URLs
  */
-define("CONF_URL_BASE", "https://www.cafecontrol.com.br");
-define("CONF_URL_TEST", "https://www.localhost/fsphp");
+define("CONF_URL_BASE", "https://cvconsig.com.br");
+//define("CONF_URL_TEST", "https://www.localhost/fsphp");
 
 /**
  * SITE
  */
-define("CONF_SITE_NAME", "CaféControl");
-define("CONF_SITE_TITLE", "Gerencie suas contas com o melhor café");
+define("CONF_SITE_NAME", "CvConsig");
+define("CONF_SITE_TITLE", "Correspondente Bancário");
 define("CONF_SITE_DESC",
-    "O CafeControl é um gerenciador de contas simples, poderoso e gratuito. O prazer de tomar um café e ter o controle total de suas contas.");
+    "A CvConsig é correspondente bancário especializada em crédito consignado. Atendimento em todo o Brasil com clareza, segurança e mais de 20 anos de experiência.");
 define("CONF_SITE_LANG", "pt_BR");
-define("CONF_SITE_DOMAIN", "upinside.com.br");
-define("CONF_SITE_ADDR_STREET", "SC 406 - Rod. Drº Antônio Luiz Moura Gonzaga");
-define("CONF_SITE_ADDR_NUMBER", "3339");
-define("CONF_SITE_ADDR_COMPLEMENT", "Bloco A, Sala 208");
-define("CONF_SITE_ADDR_CITY", "Florianópolis");
-define("CONF_SITE_ADDR_STATE", "SC");
-define("CONF_SITE_ADDR_ZIPCODE", "88048-301");
+define("CONF_SITE_DOMAIN", "cvconsig.com.br");
+define("CONF_SITE_ADDR_STREET", "");
+define("CONF_SITE_ADDR_NUMBER", "");
+define("CONF_SITE_ADDR_COMPLEMENT", "");
+define("CONF_SITE_ADDR_CITY", "Brasil");
+define("CONF_SITE_ADDR_STATE", "");
+define("CONF_SITE_ADDR_ZIPCODE", "");
 
 /**
  * SOCIAL
@@ -35,11 +35,11 @@ define("CONF_SITE_ADDR_ZIPCODE", "88048-301");
 define("CONF_SOCIAL_TWITTER_CREATOR", "@creator");
 define("CONF_SOCIAL_TWITTER_PUBLISHER", "@creator");
 define("CONF_SOCIAL_FACEBOOK_APP", "5555555555");
-define("CONF_SOCIAL_FACEBOOK_PAGE", "pagename");
+define("CONF_SOCIAL_FACEBOOK_PAGE", "CvConsig");
 define("CONF_SOCIAL_FACEBOOK_AUTHOR", "author");
 define("CONF_SOCIAL_GOOGLE_PAGE", "5555555555");
 define("CONF_SOCIAL_GOOGLE_AUTHOR", "5555555555");
-define("CONF_SOCIAL_INSTAGRAM_PAGE", "insta");
+define("CONF_SOCIAL_INSTAGRAM_PAGE", "andreiadossantos");
 define("CONF_SOCIAL_YOUTUBE_PAGE", "youtube");
 
 /**
