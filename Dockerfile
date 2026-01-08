@@ -26,9 +26,9 @@ COPY . .
 RUN if [ -f "htaccess.txt" ] && [ ! -f ".htaccess" ]; then cp htaccess.txt .htaccess; fi
 
 # Mostra o erro real do composer no log do build
-RUN set -eux; \
+RUN set -ux; \
     composer --version; \
-    composer diagnose; \
+    composer diagnose || true; \
     composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader -vvv
 
 RUN chown -R www-data:www-data /var/www/html
