@@ -1,16 +1,16 @@
 RewriteEngine On
 Options All -Indexes
 
-# ROUTER WWW Redirect.
-# RewriteCond %{HTTP_HOST} !^www\. [NC]
-# RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# ROUTER HTTPS Redirect
-RewriteCond %{HTTP:X-Forwarded-Proto} !https
+# --- HTTPS (atrás de proxy) ---
+# Se o EasyPanel termina o SSL no proxy, X-Forwarded-Proto é o que manda.
+RewriteCond %{HTTP:X-Forwarded-Proto} !https [OR]
 RewriteCond %{HTTPS} off
 RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-# ROUTER URL Rewrite
-RewriteCond %{SCRIPT_FILENAME} !-f
-RewriteCond %{SCRIPT_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?route=/$1
+# --- NÃO reescrever arquivos/pastas reais (CSS/JS/img) ---
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# --- Router (CoffeeCode) ---
+RewriteRule ^ index.php?route=/$0 [QSA,L]
