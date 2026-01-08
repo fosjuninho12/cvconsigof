@@ -106,8 +106,12 @@
 </footer>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53658515-18"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="<?= theme("/assets/js/scripts.js"); ?>"></script>
+
 <?= $v->section("scripts"); ?>
+
 
 </body>
 </html>
