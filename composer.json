@@ -1,17 +1,17 @@
 {
-  "name": "wallace/tiede",
-  "description": "Curso de Formação FullStackPHP",
+  "name": "carlos/junior",
+  "description": "cvconsig",
   "minimum-stability": "stable",
   "authors": [
     {
-      "name": "Wallace T. Campanha",
-      "email": "wallacecampanha@gmail.com",
+      "name": "Cv Consig",
+      "email": "sac@cvconsig.com",
       "homepage": "https://www.facebook.com/wallace.tiede",
       "role": "Developer"
     }
   ],
   "config": {
-    "vendor-dir": "vendor"
+    "vendor-dir": "vendor" 
   },
   "autoload": {
     "psr-4": {
