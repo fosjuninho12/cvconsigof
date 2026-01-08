@@ -2,6 +2,7 @@ RewriteEngine On
 Options All -Indexes
 
 # BLINDAGEM: nunca mandar assets para o router
+RewriteRule ^shared/ - [L]
 RewriteRule ^themes/ - [L]
 RewriteRule ^storage/ - [L]
 

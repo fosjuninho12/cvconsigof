@@ -2,14 +2,23 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-        <meta name="mit" content="2021-09-09T21:08:44-03:00+53178">
+    <meta name="mit" content="2021-09-09T21:08:44-03:00+53178">
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <?= $head; ?>
 
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="<?= theme("/assets/images/favicon.png"); ?>"/>
+
+    <!-- CSS BASE (estrutura + ícones) -->
+    <link rel="stylesheet" href="<?= url("/shared/styles/boot.css"); ?>"/>
+    <link rel="stylesheet" href="<?= url("/shared/styles/styles.css"); ?>"/>
+
+    <!-- CSS DO TEMA -->
     <link rel="stylesheet" href="<?= theme("/assets/css/style.css"); ?>"/>
+    <link rel="stylesheet" href="<?= theme("/assets/css/message.css"); ?>"/>
 </head>
+
 <body>
 
 <div class="ajax_load">
