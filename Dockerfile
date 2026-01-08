@@ -1,4 +1,4 @@
-FROM php:8.1-apache
+FROM php:7.4-apache
 
 ENV COMPOSER_ALLOW_SUPERUSER=1
 
@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y \
   && docker-php-ext-install \
       pdo pdo_mysql zip gd \
       mbstring intl xml bcmath opcache \
+      exif fileinfo \
   && a2enmod rewrite headers \
   && sed -i 's/AllowOverride None/AllowOverride All/g' /etc/apache2/apache2.conf \
   && rm -rf /var/lib/apt/lists/*
@@ -25,11 +26,8 @@ COPY . .
 # Se existir htaccess.txt, cria .htaccess
 RUN if [ -f "htaccess.txt" ] && [ ! -f ".htaccess" ]; then cp htaccess.txt .htaccess; fi
 
-# Mostra o erro real do composer no log do build
-RUN set -ux; \
-    composer --version; \
-    composer diagnose || true; \
-    composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader -vvv
+# Instala deps (usa composer.lock se existir)
+RUN composer install --no-dev --prefer-dist --no-interaction --optimize-autoloader
 
 RUN chown -R www-data:www-data /var/www/html
 
