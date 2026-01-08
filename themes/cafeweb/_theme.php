@@ -8,7 +8,7 @@
     <?= $head; ?>
 
     <link rel="icon" type="image/png" href="<?= theme("/assets/images/favicon.png"); ?>"/>
-    <link rel="stylesheet" href="<?= theme("/assets/style.css"); ?>"/>
+    <link rel="stylesheet" href="<?= theme("/assets/css/style.css"); ?>"/>
 </head>
 <body>
 
@@ -106,7 +106,7 @@
 </footer>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53658515-18"></script>
-<script src="<?= theme("/assets/scripts.js"); ?>"></script>
+<script src="<?= theme("/assets/js/scripts.js"); ?>"></script>
 <?= $v->section("scripts"); ?>
 
 </body>
